@@ -1,0 +1,69 @@
+h1 {
+  font-size: 100px;
+  padding-left: 400px;
+}
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+img {
+  height: 400px;
+  width: 400px;
+  padding-left: 100px;
+  padding-bottom: 0;
+}
+#section1 {
+  color: #0a0600;
+  display: flex;
+  align-items: center;
+}
+.about {
+  padding-left: 600px;
+}
+#section2 {
+  color: aliceblue;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 40px;
+}
+#section1 a {
+  color: black;
+  font-weight: bold;
+  font-size: 25px;
+  text-decoration: none;
+  padding-top: 0;
+}
+
+#section2 p {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+#section2 a,
+li {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 40px;
+  list-style-type: none;
+}
+
+i {
+  padding-right: 100px;
+}
+
+#Linkedin {
+  font-size: 150px;
+}
+
+#Twitter {
+  font-size: 150px;
+}
+
+#Instagram {
+  font-size: 150px;
+}
+.social-media {
+  padding-left: 500px;
+}

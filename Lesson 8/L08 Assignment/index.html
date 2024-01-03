@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/fullpage.js/dist/fullpage.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>About Me</title>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section" id="section1">
+        <h1 id="aboutSection">About Me.</h1>
+        <img src="ED photo.png" id="profileImage" />
+        <div class="about">
+          <h3 id="myName">Edry Rezal</h3>
+          <p id="description">
+            Hello, My name is Edry Rezal. I am a student in Republic Polytechnic
+            pursuing a diploma in digital design and development.
+            Forward-thinking software developer with a passion for web
+            technologies. Strong competence in crafting innovative digital
+            solutions. Committed to continuous self-development and poised to
+            explore future opportunities in e-commerce and business innovation.
+          </p>
+          <p id="age">18</p>
+        </div>
+      </div>
+
+      <div class="section" id="section2">
+        <h1 id="socialMediaSection">Social Medias</h1>
+        <div class="social-media">
+                 <i class="fa-brands fa-linkedin" id="Linkedin"></i></i><a href="#"></a>    
+           <i class="fa-brands fa-square-x-twitter"id="Twitter"></i><a href="#"></a>
+           <i class="fa-brands fa-square-instagram " id="Instagram"></i><a href="#"></a>
+           <p id="Phone">Phone Number: +65 9737 3567</p>
+          
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/fullpage.js/dist/fullpage.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#fullpage").fullpage({
+          sectionsColor: ["#f0faff", "#0a0600"],
+          navigation: true,
+          navigationPosition: "right",
+          afterLoad: function (origin, destination, direction) {
+            if (destination.index === 0) {
+              animateSection1();
+            } else if (destination.index === 1) {
+              animateSection2();
+            }
+          },
+        });
+      });
+    
+      function animateSection1() {
+        const nameAnimation = anime({
+        targets: "#myName",
+        translateX: [-300, 0],
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 1500,
+      });
+
+      const imageAnimation = anime({
+        targets: "#profileImage",
+        translateY: [-300, 0],
+        opacity: [0, 1],
+        easing: "easeInOutExpo",
+
+        duration: 1500,
+      });
+
+      const aboutAnimation = anime({
+        targets: "#aboutSection",
+        translateY: [300, 0],
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 1500,
+      });
+
+      const descriptionAnimation = anime({
+        targets: "#description",
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 1500,
+        delay: anime.stagger(300, { start: 1000 }),
+      });
+      const age = anime({
+        targets: "#age",
+        opacity: [0, 1],
+        innerHTML: [0, 18],
+        easing: "easeInOutQuad",
+        duration: 1500,
+      });
+      
+
+      anime({
+        targets: ".section",
+        translateY: [100, 0],
+        opacity: [0, 1],
+        easing: "easeInOutQuad",
+        duration: 1500,
+        delay: anime.stagger(200),
+      });
+      }
+    
+      function animateSection2() {
+    const socialMediaAnimation = anime({
+      targets: "#socialMediaSection",
+      translateY: [300, 0],
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1500,
+    });
+
+    const linkedinAnimation = anime({
+      targets: "#Linkedin",
+      translateY: [300, 0],
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+    });
+
+    const twitterAnimation = anime({
+      targets: "#Twitter",
+      translateY: [300, 0],
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+      delay: 200,
+    });
+
+    const instagramAnimation = anime({
+      targets: "#Instagram",
+      translateY: [300, 0],
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+      delay: 400,
+    });
+
+    const phone = anime({
+      targets: "#Phone",
+      translateY: [300, 0],
+      opacity: [0, 1],
+      easing: "easeInOutQuad",
+      duration: 1000,
+      delay: 400,
+    });
+  }
+    </script>
+    
+  </body>
+</html>
